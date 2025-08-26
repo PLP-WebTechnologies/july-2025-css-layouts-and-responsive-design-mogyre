@@ -1,0 +1,123 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.navbar {
+  background: #444;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0.5em 1em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.navbar a:hover {
+  background: #555;
+  border-radius: 4px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background: whitesmoke;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.content {
+  background: whitesmoke;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  flex: 1 1 200px;
+  border: 1px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  margin-top: 20px;
+  padding: 1em;
+}
+
+/*Media Queries for Responsiveness  */
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .navbar li {
+    margin: 0.3em 0;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
